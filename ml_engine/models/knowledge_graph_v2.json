@@ -1,0 +1,501 @@
+{
+  "nodes": [
+    {
+      "id": "gene_BRAF",
+      "type": "gene",
+      "name": "BRAF"
+    },
+    {
+      "id": "gene_MET",
+      "type": "gene",
+      "name": "MET"
+    },
+    {
+      "id": "gene_PTEN",
+      "type": "gene",
+      "name": "PTEN"
+    },
+    {
+      "id": "gene_STK11",
+      "type": "gene",
+      "name": "STK11"
+    },
+    {
+      "id": "gene_AKT1",
+      "type": "gene",
+      "name": "AKT1"
+    },
+    {
+      "id": "gene_JAK2",
+      "type": "gene",
+      "name": "JAK2"
+    },
+    {
+      "id": "gene_TSC2",
+      "type": "gene",
+      "name": "TSC2"
+    },
+    {
+      "id": "gene_KIT",
+      "type": "gene",
+      "name": "KIT"
+    },
+    {
+      "id": "gene_NTRK1",
+      "type": "gene",
+      "name": "NTRK1"
+    },
+    {
+      "id": "gene_ALK",
+      "type": "gene",
+      "name": "ALK"
+    },
+    {
+      "id": "gene_PIK3CA",
+      "type": "gene",
+      "name": "PIK3CA"
+    },
+    {
+      "id": "gene_hsa-miR-19a",
+      "type": "gene",
+      "name": "hsa-miR-19a"
+    },
+    {
+      "id": "gene_TSC1",
+      "type": "gene",
+      "name": "TSC1"
+    },
+    {
+      "id": "gene_VEGFA",
+      "type": "gene",
+      "name": "VEGFA"
+    },
+    {
+      "id": "gene_NOTCH1",
+      "type": "gene",
+      "name": "NOTCH1"
+    },
+    {
+      "id": "gene_PDGFRA",
+      "type": "gene",
+      "name": "PDGFRA"
+    },
+    {
+      "id": "gene_APC",
+      "type": "gene",
+      "name": "APC"
+    },
+    {
+      "id": "gene_FGFR2",
+      "type": "gene",
+      "name": "FGFR2"
+    },
+    {
+      "id": "gene_hsa-miR-21",
+      "type": "gene",
+      "name": "hsa-miR-21"
+    },
+    {
+      "id": "gene_PBRM1",
+      "type": "gene",
+      "name": "PBRM1"
+    },
+    {
+      "id": "gene_VHL",
+      "type": "gene",
+      "name": "VHL"
+    },
+    {
+      "id": "gene_hsa-miR-10b",
+      "type": "gene",
+      "name": "hsa-miR-10b"
+    },
+    {
+      "id": "gene_ATM",
+      "type": "gene",
+      "name": "ATM"
+    },
+    {
+      "id": "gene_MYC",
+      "type": "gene",
+      "name": "MYC"
+    },
+    {
+      "id": "gene_FLT3",
+      "type": "gene",
+      "name": "FLT3"
+    },
+    {
+      "id": "gene_RET",
+      "type": "gene",
+      "name": "RET"
+    },
+    {
+      "id": "gene_hsa-miR-205",
+      "type": "gene",
+      "name": "hsa-miR-205"
+    },
+    {
+      "id": "gene_TP53",
+      "type": "gene",
+      "name": "TP53"
+    },
+    {
+      "id": "gene_ERBB2",
+      "type": "gene",
+      "name": "ERBB2"
+    },
+    {
+      "id": "gene_hsa-miR-92a",
+      "type": "gene",
+      "name": "hsa-miR-92a"
+    },
+    {
+      "id": "gene_IL6",
+      "type": "gene",
+      "name": "IL6"
+    },
+    {
+      "id": "gene_EGFR",
+      "type": "gene",
+      "name": "EGFR"
+    },
+    {
+      "id": "gene_ARID1A",
+      "type": "gene",
+      "name": "ARID1A"
+    },
+    {
+      "id": "gene_KRAS",
+      "type": "gene",
+      "name": "KRAS"
+    },
+    {
+      "id": "gene_PALB2",
+      "type": "gene",
+      "name": "PALB2"
+    },
+    {
+      "id": "gene_TNF",
+      "type": "gene",
+      "name": "TNF"
+    },
+    {
+      "id": "gene_hsa-miR-34a",
+      "type": "gene",
+      "name": "hsa-miR-34a"
+    },
+    {
+      "id": "gene_hsa-miR-221",
+      "type": "gene",
+      "name": "hsa-miR-221"
+    },
+    {
+      "id": "gene_hsa-miR-125b",
+      "type": "gene",
+      "name": "hsa-miR-125b"
+    },
+    {
+      "id": "gene_hsa-miR-124",
+      "type": "gene",
+      "name": "hsa-miR-124"
+    },
+    {
+      "id": "gene_hsa-miR-520c",
+      "type": "gene",
+      "name": "hsa-miR-520c"
+    },
+    {
+      "id": "gene_RB1",
+      "type": "gene",
+      "name": "RB1"
+    },
+    {
+      "id": "gene_BRCA2",
+      "type": "gene",
+      "name": "BRCA2"
+    },
+    {
+      "id": "gene_hsa-miR-222",
+      "type": "gene",
+      "name": "hsa-miR-222"
+    },
+    {
+      "id": "gene_CDH1",
+      "type": "gene",
+      "name": "CDH1"
+    },
+    {
+      "id": "gene_hsa-miR-200c",
+      "type": "gene",
+      "name": "hsa-miR-200c"
+    },
+    {
+      "id": "gene_hsa-miR-137",
+      "type": "gene",
+      "name": "hsa-miR-137"
+    },
+    {
+      "id": "gene_hsa-miR-155",
+      "type": "gene",
+      "name": "hsa-miR-155"
+    },
+    {
+      "id": "gene_BRCA1",
+      "type": "gene",
+      "name": "BRCA1"
+    },
+    {
+      "id": "gene_hsa-miR-145",
+      "type": "gene",
+      "name": "hsa-miR-145"
+    },
+    {
+      "id": "gene_hsa-miR-17",
+      "type": "gene",
+      "name": "hsa-miR-17"
+    },
+    {
+      "id": "gene_hsa-miR-373",
+      "type": "gene",
+      "name": "hsa-miR-373"
+    },
+    {
+      "id": "gene_hsa-miR-9",
+      "type": "gene",
+      "name": "hsa-miR-9"
+    },
+    {
+      "id": "gene_CDKN2A",
+      "type": "gene",
+      "name": "CDKN2A"
+    },
+    {
+      "id": "gene_NF1",
+      "type": "gene",
+      "name": "NF1"
+    },
+    {
+      "id": "gene_CHEK2",
+      "type": "gene",
+      "name": "CHEK2"
+    },
+    {
+      "id": "gene_SMAD4",
+      "type": "gene",
+      "name": "SMAD4"
+    },
+    {
+      "id": "gene_CTNNB1",
+      "type": "gene",
+      "name": "CTNNB1"
+    },
+    {
+      "id": "gene_hsa-miR-203",
+      "type": "gene",
+      "name": "hsa-miR-203"
+    },
+    {
+      "id": "gene_hsa-miR-146a",
+      "type": "gene",
+      "name": "hsa-miR-146a"
+    },
+    {
+      "id": "pathway_PI3K-AKT",
+      "type": "pathway",
+      "name": "PI3K-AKT"
+    },
+    {
+      "id": "pathway_p53",
+      "type": "pathway",
+      "name": "p53"
+    },
+    {
+      "id": "pathway_BRCA",
+      "type": "pathway",
+      "name": "BRCA"
+    },
+    {
+      "id": "pathway_MAPK",
+      "type": "pathway",
+      "name": "MAPK"
+    },
+    {
+      "id": "pathway_WNT",
+      "type": "pathway",
+      "name": "WNT"
+    },
+    {
+      "id": "pathway_EGFR",
+      "type": "pathway",
+      "name": "EGFR"
+    },
+    {
+      "id": "pathway_TGF-beta",
+      "type": "pathway",
+      "name": "TGF-beta"
+    },
+    {
+      "id": "pathway_Hedgehog",
+      "type": "pathway",
+      "name": "Hedgehog"
+    },
+    {
+      "id": "pathway_Notch",
+      "type": "pathway",
+      "name": "Notch"
+    }
+  ],
+  "edges": [
+    {
+      "source": "gene_BRAF",
+      "target": "pathway_MAPK",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_BRAF",
+      "target": "gene_KRAS",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_MET",
+      "target": "pathway_EGFR",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_PTEN",
+      "target": "pathway_PI3K-AKT",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_PTEN",
+      "target": "gene_PIK3CA",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_AKT1",
+      "target": "pathway_PI3K-AKT",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_AKT1",
+      "target": "gene_PIK3CA",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_PIK3CA",
+      "target": "pathway_PI3K-AKT",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_PIK3CA",
+      "target": "gene_AKT1",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_PIK3CA",
+      "target": "gene_PTEN",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_NOTCH1",
+      "target": "pathway_Notch",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_APC",
+      "target": "pathway_WNT",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_APC",
+      "target": "gene_CTNNB1",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_TP53",
+      "target": "pathway_p53",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_ERBB2",
+      "target": "pathway_EGFR",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_ERBB2",
+      "target": "gene_EGFR",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_EGFR",
+      "target": "pathway_EGFR",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_EGFR",
+      "target": "gene_ERBB2",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_KRAS",
+      "target": "pathway_MAPK",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_KRAS",
+      "target": "gene_BRAF",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_PALB2",
+      "target": "pathway_BRCA",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_RB1",
+      "target": "pathway_p53",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_BRCA2",
+      "target": "pathway_BRCA",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_BRCA2",
+      "target": "gene_BRCA1",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_BRCA1",
+      "target": "pathway_BRCA",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_BRCA1",
+      "target": "gene_BRCA2",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_CDKN2A",
+      "target": "pathway_p53",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_SMAD4",
+      "target": "pathway_TGF-beta",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_CTNNB1",
+      "target": "pathway_WNT",
+      "relation": "participates_in"
+    },
+    {
+      "source": "gene_CTNNB1",
+      "target": "gene_APC",
+      "relation": "interacts_with"
+    }
+  ]
+}

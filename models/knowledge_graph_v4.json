@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "gene_PTEN",
+      "type": "gene",
+      "name": "PTEN"
+    },
+    {
+      "id": "gene_SOX2",
+      "type": "gene",
+      "name": "SOX2"
+    },
+    {
+      "id": "gene_RB1",
+      "type": "gene",
+      "name": "RB1"
+    },
+    {
+      "id": "gene_KRAS",
+      "type": "gene",
+      "name": "KRAS"
+    },
+    {
+      "id": "gene_SPOP",
+      "type": "gene",
+      "name": "SPOP"
+    },
+    {
+      "id": "gene_MET",
+      "type": "gene",
+      "name": "MET"
+    },
+    {
+      "id": "gene_CDKN2A",
+      "type": "gene",
+      "name": "CDKN2A"
+    },
+    {
+      "id": "gene_BRCA1",
+      "type": "gene",
+      "name": "BRCA1"
+    },
+    {
+      "id": "gene_EGFR",
+      "type": "gene",
+      "name": "EGFR"
+    },
+    {
+      "id": "gene_TP53",
+      "type": "gene",
+      "name": "TP53"
+    },
+    {
+      "id": "gene_STK11",
+      "type": "gene",
+      "name": "STK11"
+    },
+    {
+      "id": "gene_KEAP1",
+      "type": "gene",
+      "name": "KEAP1"
+    },
+    {
+      "id": "gene_MYC",
+      "type": "gene",
+      "name": "MYC"
+    },
+    {
+      "id": "gene_BRAF",
+      "type": "gene",
+      "name": "BRAF"
+    },
+    {
+      "id": "gene_FGFR1",
+      "type": "gene",
+      "name": "FGFR1"
+    },
+    {
+      "id": "gene_FOXA1",
+      "type": "gene",
+      "name": "FOXA1"
+    },
+    {
+      "id": "gene_ERG",
+      "type": "gene",
+      "name": "ERG"
+    },
+    {
+      "id": "gene_AR",
+      "type": "gene",
+      "name": "AR"
+    },
+    {
+      "id": "gene_NFE2L2",
+      "type": "gene",
+      "name": "NFE2L2"
+    },
+    {
+      "id": "gene_PIK3CA",
+      "type": "gene",
+      "name": "PIK3CA"
+    },
+    {
+      "id": "gene_ALK",
+      "type": "gene",
+      "name": "ALK"
+    }
+  ],
+  "edges": [
+    {
+      "source": "gene_PTEN",
+      "target": "gene_PIK3CA",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_KRAS",
+      "target": "gene_BRAF",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_BRAF",
+      "target": "gene_KRAS",
+      "relation": "interacts_with"
+    },
+    {
+      "source": "gene_PIK3CA",
+      "target": "gene_PTEN",
+      "relation": "interacts_with"
+    }
+  ]
+}

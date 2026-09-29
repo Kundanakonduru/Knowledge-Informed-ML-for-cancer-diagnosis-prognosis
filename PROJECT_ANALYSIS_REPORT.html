@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Analysis & UML Diagrams</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose'
+        });
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #2c3e50;
+            margin-top: 1.5em;
+        }
+
+        h1 {
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 5px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .diagram-container {
+            background-color: #ffffff;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+            overflow-x: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        code {
+            background-color: #f6f8fa;
+            padding: 0.2em 0.4em;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        ul {
+            margin-bottom: 1em;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        .mermaid {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>System Analysis & UML Documentation</h1>
+
+        <h2>1. Code Repository Analysis</h2>
+
+        <h3>Folder Structure Overview</h3>
+        <ul>
+            <li><strong>backend/</strong>: FastAPI application serving as the core system logic.
+                <ul>
+                    <li><code>api/</code>: REST endpoints for Auth, Patients, Training, Prediction.</li>
+                    <li><code>database/</code>: SQLAlchemy models and connection logic (MySQL/MariaDB).</li>
+                    <li><code>models/</code>: Pydantic schemas for request/response validation.</li>
+                </ul>
+            </li>
+            <li><strong>frontend/</strong>: React web application.
+                <ul>
+                    <li>Uses TailwindCSS for styling.</li>
+                    <li>Consumes backend APIs.</li>
+                </ul>
+            </li>
+            <li><strong>ml_engine/</strong>: Core Machine Learning logic.
+                <ul>
+                    <li><code>gnn_model.py</code>: PyTorch Geometric implementation of GAT (Graph Attention Network).
+                    </li>
+                    <li><code>knowledge_graph.py</code>: NetworkX-based knowledge graph builder.</li>
+                    <li><code>train_model.py</code>: Training pipeline.</li>
+                </ul>
+            </li>
+            <li><strong>data/</strong>: Dataset storage (CSV files).</li>
+        </ul>
+
+        <hr>
+
+        <h2>2. Data & Training Analysis</h2>
+        <h3>Data Pipeline</h3>
+        <ol>
+            <li><strong>Source</strong>: Multi-omics data (mRNA, miRNA, Methylation) + Clinical data.</li>
+            <li><strong>Ingestion</strong>: <code>data_loader.py</code> reads CSV or Database exports.</li>
+            <li><strong>Preprocessing</strong>: StandardScaler, Knowledge Graph mapping.</li>
+            <li><strong>Graph Construction</strong>: Genes (Nodes) + Pathways (Edges).</li>
+        </ol>
+
+        <hr>
+
+        <h2>3. Model Analysis</h2>
+        <ul>
+            <li><strong>Type</strong>: Graph Neural Network (GNN).</li>
+            <li><strong>Architecture</strong>: Graph Attention Network (GAT).</li>
+            <li><strong>Logic</strong>: Learns from gene expression propagation through biological pathways.</li>
+        </ul>
+
+        <hr>
+
+        <h2>4. UML Diagrams</h2>
+        <p><em>The following diagrams are rendered using Mermaid.js.</em></p>
+
+        <h3>1️⃣ Use Case Diagram</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                flowchart LR
+                subgraph Actors
+                Admin[Admin]
+                User[User]
+                ML_Engine[ML Engine]
+                Data_Store[Data Store]
+                end
+
+                subgraph System ["Cancer Diagnosis System"]
+                UC1(["Upload Patient Data"])
+                UC2(["Trigger Model Training"])
+                UC3(["View Training Progress"])
+                UC4(["Generate Prediction"])
+                UC5(["View History"])
+                UC6(["Manage Models"])
+                end
+
+                User --- UC1
+                User --- UC4
+                User --- UC5
+                Admin --- UC2
+                Admin --- UC3
+                Admin --- UC6
+
+                UC2 --- ML_Engine
+                UC4 --- ML_Engine
+                UC1 --- Data_Store
+                UC4 --- Data_Store
+            </div>
+        </div>
+
+        <h3>2️⃣ Class Diagram</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                classDiagram
+                class Patient {
+                +int patient_id
+                +string name
+                +int age
+                +string gender
+                +list clinical_data
+                +get_features()
+                }
+
+                class Prediction {
+                +int prediction_id
+                +int patient_id
+                +string cancer_type
+                +float risk_score
+                +float confidence
+                +datetime created_at
+                }
+
+                class GATCancerClassifier {
+                +int num_node_features
+                +int num_classes
+                +forward(data)
+                +get_attention_weights(data)
+                }
+
+                class KnowledgeGraphBuilder {
+                +Graph graph
+                +build_from_genes(gene_list)
+                +get_node_features(features)
+                }
+
+                class TrainingService {
+                +train_model(config)
+                +evaluate_model()
+                }
+
+                class PredictionService {
+                +predict(patient_id)
+                +load_model(path)
+                }
+
+                Patient "1" -- "many" Prediction : has
+                TrainingService ..> GATCancerClassifier : creates
+                TrainingService ..> KnowledgeGraphBuilder : uses
+                PredictionService ..> GATCancerClassifier : uses
+                GATCancerClassifier -- KnowledgeGraphBuilder : depends on structure
+            </div>
+        </div>
+
+        <h3>3️⃣ Sequence Diagram (Training)</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                sequenceDiagram
+                participant User
+                participant API as Backend API
+                participant DB as Database
+                participant DE as Data Engine
+                participant KG as KG Builder
+                participant GNN as GNN Model
+                participant FS as File System
+
+                User->>API: POST /api/training/train
+                API->>DB: Fetch Training Data
+                DB-->>API: Data Records
+                API->>DE: Prepare Data
+                DE->>KG: Build Graph Structure
+                KG-->>DE: Graph Topology
+                DE->>GNN: Initialize Model
+
+                loop Training Epochs
+                DE->>GNN: Feed Batch (Graph + Label)
+                GNN->>GNN: Forward Pass & Backprop
+                end
+
+                GNN-->>API: Training Complete
+                API->>FS: Save Model (.pkl) & Graph (.json)
+                API-->>User: Success (Accuracy Stats)
+            </div>
+        </div>
+
+        <h3>4️⃣ Sequence Diagram (Prediction)</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                sequenceDiagram
+                participant User
+                participant API as Backend API
+                participant DB as Database
+                participant ML as ML Engine
+                participant GNN as Saved Model
+
+                User->>API: GET /api/prediction/predict/{id}
+                API->>DB: Get Patient Data
+                DB-->>API: Patient Features
+                API->>ML: predict_cancer_type(features)
+                ML->>GNN: Load Model & Graph
+                ML->>GNN: Forward Pass
+                GNN-->>ML: Logits / Softmax
+                ML-->>API: Cancer Type + Confidence
+                API->>DB: Save Prediction
+                API-->>User: JSON Response
+            </div>
+        </div>
+
+        <h3>5️⃣ Activity Diagram (End-to-End)</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                flowchart TD
+                Start([Start]) --> Ingest[Data Ingestion]
+                Ingest --> Preprocess[Preprocessing & Normalization]
+                Preprocess --> Split{Training or Inference?}
+
+                Split -- Training --> KG[Build Knowledge Graph]
+                KG --> TrainLoop[GNN Training Loop]
+                TrainLoop --> Eval[Evaluation & Testing]
+                Eval --> Save[Save Model Artifacts]
+                Save --> End([End])
+
+                Split -- Inference --> Load[Load Model & KG]
+                Load --> GraphGen[Generate Patient Graph]
+                GraphGen --> Pred[Model Forward Pass]
+                Pred --> Result[Generate Risk Score]
+                Result --> Store[Store in DB]
+                Store --> End
+            </div>
+        </div>
+
+        <h3>6️⃣ Model Flow Diagram</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                flowchart LR
+                subgraph Inputs
+                Genes[Gene Expression]
+                CNV[Copy Number Var]
+                Meth[Methylation]
+                end
+
+                subgraph Knowledge_Graph
+                Genes --> Nodes[Graph Nodes]
+                Pathways[Biological Pathways] -.-> Edges[Graph Edges]
+                PPI[PPI Interactions] -.-> Edges
+                end
+
+                subgraph GNN_Architecture
+                Nodes --> GAT1[GAT Conv 1]
+                Edges --> GAT1
+                GAT1 --> GAT2[GAT Conv 2]
+                GAT2 --> GAT3[GAT Conv 3]
+                GAT3 --> Pool[Global Mean+Max Pool]
+                end
+
+                subgraph Output
+                Pool --> MLP[Classifier MLP]
+                MLP --> Class[Cancer Type]
+                MLP --> Risk[Risk Score]
+                end
+            </div>
+        </div>
+
+        <h3>7️⃣ Proposed Project Workflow (System Architecture)</h3>
+        <div class="diagram-container">
+            <div class="mermaid">
+                flowchart TB
+                subgraph Frontend_Layer
+                UI[React Dashboard]
+                end
+
+                subgraph Backend_Layer
+                API[FastAPI Gateway]
+                Auth[Auth Service]
+                Logic[Business Logic]
+                end
+
+                subgraph Data_Layer
+                DB[(SQL Database)]
+                Files[File Storage]
+                end
+
+                subgraph ML_Layer
+                Pre[Preprocessing]
+                KG_Engine[Knowledge Graph Engine]
+                GNN[GNN Model]
+                end
+
+                UI <--> API
+                    API <--> Auth
+                        API <--> Logic
+                            Logic <--> DB
+                                Logic <--> Files
+                                    Logic <--> Pre
+                                        Pre --> KG_Engine
+                                        KG_Engine --> GNN
+                                        GNN --> Logic
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
